@@ -1,3 +1,5 @@
+
+
 public class linkedList {
     /*
     Musical Playlist
@@ -5,7 +7,11 @@ public class linkedList {
     linked list representation a song and the linked list maintain the order of song in the playlist
      */
 
+    ///// search concepts in LinkedList /////
+    public boolean contains(int data){
 
 
+        return false;
+    }
 
 }

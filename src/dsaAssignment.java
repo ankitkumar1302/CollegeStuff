@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class dsaAssignment {
 
     /*
@@ -11,12 +9,26 @@ public class dsaAssignment {
     9) To find Armstrong Number between two given number.
      */
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int a = sc.nextInt();
-        System.out.println(isArmstrong(a));
-
+        System.out.println(question9(153));
     }
+    static boolean question9(int n) {
+        // What is Armstrong Number
+        // between 2 numbers
+        int originalNumber = n;
+        int sum = 0;
+        int numOfDigits = String.valueOf(n).length();
+        while (n != 0) {
+            int digit = n % 10;
+            sum += (int) Math.pow(digit, numOfDigits);
+            n /= 10;
+        }
+        return sum == originalNumber;
+    }
+    /*
 static boolean isArmstrong(int num) {
+    Scanner sc = new Scanner(System.in);
+    int a = sc.nextInt();
+    System.out.println(isArmstrong(a));
     int originalNum = num;
     int sum = 0;
     int numOfDigits = String.valueOf(num).length();
@@ -61,7 +73,7 @@ static boolean isArmstrong(int num) {
         System.out.println("The price in USD is " + ans);
     }
 
- /*
+
     static void question5() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the 1st value");
