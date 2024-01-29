@@ -18,12 +18,40 @@
 public class LinkedList {
     private Node head;
     private Node tail;
+    private Node prev;
 
-    public Node getHead(){
+    public Node getHead() {
         return this.head;
     }
 
-    public Node getTail(){
+    public Node getTail() {
         return this.tail;
+    }
+}
+
+class doublyLinkedList {
+    Node head, tail, prev;
+
+
+    public void addLast(int data) {
+
+
+    }
+
+    public void prepend(int data) {
+        Node newNode = new Node(data);
+        newNode.setNext(head);
+        if (head != null) {
+            head.prev = newNode;
+        }
+        head = newNode;
+    }
+
+    public void addFirst(int data) {
+        prepend(data);
+    }
+
+    public void display() {
+
     }
 }
